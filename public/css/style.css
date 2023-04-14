@@ -1,0 +1,153 @@
+body {
+    width: 1200px;
+    margin: auto;
+    padding: 20px;
+    color: #4A000B;
+    background-color: #faebd7;
+    font-family: 'Gill Sans MT';
+}
+
+img {
+    box-shadow: 20px 20px 20px #4A000B;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h3 {
+    margin-left: 100px;
+}
+
+.navigation {
+    background-color: #4A000B;
+    width: 100%;
+    overflow: auto;
+}
+
+.navigation a {
+    color: #faebd7;
+    font-size: 30px;
+    width: 25%;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.content img {
+    width: 700px;
+    margin: 10px 50px 70px;
+}
+
+.grid {
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid-internal {
+    border: 1px solid #4A000B;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.product-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 400px);
+    grid-gap: 20px;
+    font-size: 18px;
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+    text-align: center;
+    font-size: small;
+    color: #4A000B;
+}
+
+button {
+    background-color: #4A000B;
+    color: #faebd7;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Gill Sans MT';
+    border-radius: 5px;
+}
+
+.product-grid img {
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
+}
+
+.products {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    color: #4A000B;
+    text-align: center;
+}
+
+.content {
+    font-size: 17px;
+    text-align: justify;
+    margin: 20px;
+}
+
+.error-message {
+    color: red;
+}
+
+.customer-details-table {
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+.result-table {
+    border-collapse: collapse;
+}
+
+.result-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4A000B;
+    ;
+    color: white;
+}
+
+.result-table th,
+.result-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.result-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.result-table tr:hover {
+    background-color: #ddd;
+}
+
+footer {
+    clear: both;
+    background-color: #4A000B;
+    color: #faebd7;
+    text-align: center;
+    padding: 10px;
+}

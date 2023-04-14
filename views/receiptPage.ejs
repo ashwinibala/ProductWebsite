@@ -1,0 +1,144 @@
+<%- include('shared/header.ejs') -%>
+    <div>
+        <h2>Customer Receipt</h2>
+        <center>
+            <table border="2" class="result-table">
+                <tr>
+                    <th colspan="1">Name:</th>
+                    <td colspan="3">
+                        <%= formElements.name %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">Address:</th>
+                    <td colspan="3">
+                        <%= formElements.address %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">Province:</th>
+                    <td colspan="3">
+                        <%= formElements.province %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">City:</th>
+                    <td colspan="3">
+                        <%= formElements.city %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">Email:</th>
+                    <td colspan="3">
+                        <%= formElements.email %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">Phone:</th>
+                    <td colspan="3">
+                        <%= formElements.phone %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total Price</th>
+                </tr>
+                <% if(formElements.darkRoastedCoffeeToffee !=0) { %>
+                    <tr>
+                        <td>Dark Roasted Coffee Toffee</td>
+                        <td>
+                            <%= formElements.darkRoastedCoffeeToffee %>
+                        </td>
+                        <td>$15</td>
+                        <td>
+                            &dollar;<%= formElements.darkRoastedCoffeeToffeeTotal %>
+                        </td>
+                    </tr>
+                    <% } %>
+                        <% if(formElements.coffeeCaramelBars !==0) { %>
+                            <tr>
+                                <td>Coffee Caramel Bars</td>
+                                <td>
+                                    <%= formElements.coffeeCaramelBars %>
+                                </td>
+                                <td>$12</td>
+                                <td>
+                                    &dollar;<%= formElements.coffeeCaramelBarsTotal %>
+                                </td>
+                            </tr>
+                            <% } %>
+                                <% if(formElements.coffeeChocolateMousse !==0) { %>
+                                    <tr>
+                                        <td>Coffee Chocolate Mousse</td>
+                                        <td>
+                                            <%= formElements.coffeeChocolateMousse %>
+                                        </td>
+                                        <td>$17</td>
+                                        <td>
+                                            &dollar;<%= formElements.coffeeChocolateMousseTotal %>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                                        <% if(formElements.coffeeChocolateDonuts !==0) { %>
+                                            <tr>
+                                                <td>Coffee Chocolate Donuts</td>
+                                                <td>
+                                                    <%= formElements.coffeeChocolateDonuts %>
+                                                </td>
+                                                <td>$12</td>
+                                                <td>
+                                                    &dollar;<%= formElements.coffeeChocolateDonutsTotal %>
+                                                </td>
+                                            </tr>
+                                            <% } %>
+                                                <% if(formElements.coffeeChocolateChipCookie !==0) { %>
+                                                    <tr>
+                                                        <td>Coffee Chocolate Chip Cookie</td>
+                                                        <td>
+                                                            <%= formElements.coffeeChocolateChipCookie %>
+                                                        </td>
+                                                        <td>$10</td>
+                                                        <td>
+                                                            &dollar;<%= formElements.coffeeChocolateChipCookieTotal %>
+                                                        </td>
+                                                    </tr>
+                                                    <% } %>
+                                                        <% if(formElements.assortedPacks !==0) { %>
+                                                            <tr>
+                                                                <td>Assorted Packs</td>
+                                                                <td>
+                                                                    <%= formElements.assortedPacks %>
+                                                                </td>
+                                                                <td>$12</td>
+                                                                <td>
+                                                                    &dollar;<%= formElements.assortedPacksTotal %>
+                                                                </td>
+                                                            </tr>
+                                                            <% } %>
+                                                                <tr>
+                                                                    <td colspan="3">Total</td>
+                                                                    <td>
+                                                                        &dollar;<%= formElements.total %>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">Tax</td>
+                                                                    <td>
+                                                                        &dollar;<%= formElements.tax %>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">OverAll Total</td>
+                                                                    <td>
+                                                                        &dollar;<%= formElements.overallTotal %>
+                                                                    </td>
+                                                                </tr>
+
+            </table>
+        </center>
+        <br />
+    </div>
+    <%- include('shared/footer.ejs') -%>

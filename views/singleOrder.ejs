@@ -1,0 +1,145 @@
+<%- include('shared/header.ejs') -%>
+    <div>
+        <h2>Order Details of <%= order.name %>
+        </h2>
+        <center>
+            <table border="2" class="result-table">
+                <tr>
+                    <th colspan="1">Name:</th>
+                    <td colspan="3">
+                        <%= order.name %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">Address:</th>
+                    <td colspan="3">
+                        <%= order.address %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">Province:</th>
+                    <td colspan="3">
+                        <%= order.province %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">City:</th>
+                    <td colspan="3">
+                        <%= order.city %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">Email:</th>
+                    <td colspan="3">
+                        <%= order.email %>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1">Phone:</th>
+                    <td colspan="3">
+                        <%= order.phone %>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total Price</th>
+                </tr>
+                <% if(order.darkRoastedCoffeeToffee !=0) { %>
+                    <tr>
+                        <td>Dark Roasted Coffee Toffee</td>
+                        <td>
+                            <%= order.darkRoastedCoffeeToffee %>
+                        </td>
+                        <td>$15</td>
+                        <td>
+                            $<%= order.darkRoastedCoffeeToffeeTotal %>
+                        </td>
+                    </tr>
+                    <% } %>
+                        <% if(order.coffeeCaramelBars !==0) { %>
+                            <tr>
+                                <td>Coffee Caramel Bars</td>
+                                <td>
+                                    <%= order.coffeeCaramelBars %>
+                                </td>
+                                <td>$12</td>
+                                <td>
+                                    $<%= order.coffeeCaramelBarsTotal %>
+                                </td>
+                            </tr>
+                            <% } %>
+                                <% if(order.coffeeChocolateMousse !==0) { %>
+                                    <tr>
+                                        <td>Coffee Chocolate Mousse</td>
+                                        <td>
+                                            <%= order.coffeeChocolateMousse %>
+                                        </td>
+                                        <td>$17</td>
+                                        <td>
+                                            $<%= order.coffeeChocolateMousseTotal %>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                                        <% if(order.coffeeChocolateDonuts !==0) { %>
+                                            <tr>
+                                                <td>Coffee Chocolate Donuts</td>
+                                                <td>
+                                                    <%= order.coffeeChocolateDonuts %>
+                                                </td>
+                                                <td>$12</td>
+                                                <td>
+                                                    $<%= order.coffeeChocolateDonutsTotal %>
+                                                </td>
+                                            </tr>
+                                            <% } %>
+                                                <% if(order.coffeeChocolateChipCookie !==0) { %>
+                                                    <tr>
+                                                        <td>Coffee Chocolate Chip Cookie</td>
+                                                        <td>
+                                                            <%= order.coffeeChocolateChipCookie %>
+                                                        </td>
+                                                        <td>$10</td>
+                                                        <td>
+                                                            $<%= order.coffeeChocolateChipCookieTotal %>
+                                                        </td>
+                                                    </tr>
+                                                    <% } %>
+                                                        <% if(order.assortedPacks !==0) { %>
+                                                            <tr>
+                                                                <td>Assorted Packs</td>
+                                                                <td>
+                                                                    <%= order.assortedPacks %>
+                                                                </td>
+                                                                <td>$12</td>
+                                                                <td>
+                                                                    $<%= order.assortedPacksTotal %>
+                                                                </td>
+                                                            </tr>
+                                                            <% } %>
+                                                                <tr>
+                                                                    <td colspan="3">Total</td>
+                                                                    <td>
+                                                                        $<%= order.total %>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">Tax</td>
+                                                                    <td>
+                                                                        $<%= order.tax %>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">OverAll Total</td>
+                                                                    <td>
+                                                                        $<%= order.overallTotal %>
+                                                                    </td>
+                                                                </tr>
+
+            </table>
+        </center>
+        <br />
+    </div>
+    <%- include('shared/footer.ejs') -%>

@@ -1,0 +1,44 @@
+<%- include('shared/header.ejs') -%>
+    <div class="orders">
+        <h1>Order Details</h1>
+        <center>
+            <table class="result-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Province</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Total</th>
+                    <th>Overall Total</th>
+                    <th>Details</th>
+                </tr>
+                <% data.forEach(item=> { %>
+                    <tr>
+                        <td>
+                            <%= item.name %>
+                        </td>
+                        <td>
+                            <%= item.province %>
+                        </td>
+                        <td>
+                            <%= item.phone %>
+                        </td>
+                        <td>
+                            <%= item.email %>
+                        </td>
+                        <td>
+                            &dollar;<%= item.total %>
+                        </td>
+                        <td>
+                            &dollar;<%= item.overallTotal %>
+                        </td>
+                        <td>
+                            <a href="<%= `/orders/${item.name}` %>">View</a>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </table>
+        </center>
+    </div>
+    <br />
+    <%- include('shared/footer.ejs') -%>

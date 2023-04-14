@@ -1,0 +1,135 @@
+<%- include('shared/header.ejs') -%>
+    <form class="details" method="post" action="/product">
+        <div class="grid">
+            <div class="grid-internal">
+                <div class="product-grid">
+                    <div class="products">
+                        <h2>Dark roast coffee chocolate</h2>
+                        <center>
+                            <img src="images/darkRoastedCoffeeToffee.jpg" alt="Dark roast coffee chocolate">
+                        </center>
+                        <h2>$15</h2>
+                        <label for="darkRoastedCoffeeToffeeLabel" name="darkRoastedCoffeeToffeeLabel">
+                            Quantity:&nbsp;
+                            <input type="number" name="darkRoastedCoffeeToffee" size="5" placeholder="0" />
+                        </label>
+                    </div>
+                    <div class="products">
+                        <h2>Coffee Caramel Sticks</h2>
+                        <center>
+                            <img src="images/coffeeCaramelBars.jpg" alt="Coffee Caramel Bars">
+                        </center>
+                        <h2>$12</h2>
+                        <label for="coffeecaramelBarsLabel" name="coffeeCaramelBarsLabel">
+                            Quantity:&nbsp;
+                            <input type="number" name="coffeeCaramelBars" size="5" placeholder="0" />
+                        </label>
+                    </div>
+                    <div class="products">
+                        <h2>Coffee Chocolate Mousse</h2>
+                        <center>
+                            <img src="images/coffeeChocolateMousse.jpg" alt="Coffee Chocolate Mousse">
+                        </center>
+                        <h2>$17</h2>
+                        <label for="coffeeChocolateMousseLabel" name="coffeeChocolateMousseLabel">
+                            Quantity:&nbsp;
+                            <input type="number" name="coffeeChocolateMousse" size="5" placeholder="0" />
+                        </label>
+                    </div>
+                    <div class="products">
+                        <h2>Coffee chocolate Donuts</h2>
+                        <center>
+                            <img src="images/coffeeChocolateDounuts.jpg" alt="Coffee chocolate Donuts">
+                        </center>
+                        <h2>$12</h2>
+                        <label for="coffeeChocolateDonutsLabel" name="coffeeChocolateDonutsLabel">
+                            Quantity:&nbsp;
+                            <input type="number" name="coffeeChocolateDonuts" size="5" placeholder="0" />
+                        </label>
+                    </div>
+                    <div class="products">
+                        <h2>Coffee Chocolate Chip Cookie</h2>
+                        <center>
+                            <img src="images/coffeeChololateChipcookie.jpg" alt="Coffee Chocolate Chip Cookie">
+                        </center>
+                        <h2>$10</h2>
+                        <label for="coffeeChocolateChipCookieLabel" name="coffeeChocolateChipCookieLabel">
+                            Quantity:&nbsp;
+                            <input type="number" name="coffeeChocolateChipCookie" size="5" placeholder="0" />
+                        </label>
+                    </div>
+                    <div class="products">
+                        <h2>Assorted coffee chocolate</h2>
+                        <center>
+                            <img src="images/assortedPacks.jpg" alt="Assorted coffee chocolate">
+                        </center>
+                        <h2>$20</h2>
+                        <label for="assortedPacksLabel" name="assortedPacksLabel">
+                            Quantity:&nbsp;
+                            <input type="number" name="assortedPacks" size="5" placeholder="0" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-internal">
+                <h2>Customer details</h2>
+                <table class="customer-details-table">
+                    <tr>
+                        <td><label>Name*</label> </td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Address*</label></td>
+                        <td><input type="text" name="address"></td>
+                    </tr>
+                    <tr>
+                        <td><label>City*</label></td>
+                        <td><input type="text" name="city"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Province*</label></td>
+                        <td><select name="province">
+                                <option value="" selected disabled hidden>Choose here</option>
+                                <option value="Alberta">Alberta</option>
+                                <option value="BritishColumbia">BritishColumbia</option>
+                                <option value="Manitoba">Manitoba</option>
+                                <option value="NewBrunswick">NewBrunswick</option>
+                                <option value="NewFoundLand">NewFoundLand</option>
+                                <option value="NorthWestTerritories">NorthWestTerritories</option>
+                                <option value="NovaScotia">NovaScotia</option>
+                                <option value="Nunavut">Nunavut</option>
+                                <option value="Ontario">Ontario</option>
+                                <option value="PrinceEdwardIsland">PrinceEdwardIsland</option>
+                                <option value="Quebec">Quebec</option>
+                                <option value="Saskatchewan">Saskatchewan</option>
+                                <option value="Yukon">Yukon</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Phone</label></td>
+                        <td><input type="text" name="phone" placeholder="xxx-xxx-xxxx"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email</label></td>
+                        <td><input type="text" name="email" placeholder="username@domain.com"></td>
+                    </tr>
+                </table>
+
+                <div class="checkout">
+                    <center><button id="button" type="submit">Checkout</button></center>
+                </div>
+                <div class="error-message">
+                    <% if(typeof errors !=='undefined' ) {%>
+                        <h2>*Validation errors*</h2>
+                        <%for(let error of errors) { %>
+
+                            <p>
+                                <%= error.msg %>
+                                    <p />
+                                    <% } } %>
+                </div>
+            </div>
+        </div>
+    </form>
+    <%- include('shared/footer.ejs') -%>
